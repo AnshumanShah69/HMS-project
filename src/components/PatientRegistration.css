@@ -1,0 +1,57 @@
+.patient-registration-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+.patient-registration-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+.patient-registration-form input,
+.patient-registration-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.patient-registration-form button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.patient-registration-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.patient-registration-form textarea {
+  height: 120px;
+}
+
+.patient-registration-form input:invalid,
+.patient-registration-form textarea:invalid {
+  border-color: #494848;
+}
+
+.patient-registration-form input:valid,
+.patient-registration-form textarea:valid {
+  border-color: #00cc00;
+}

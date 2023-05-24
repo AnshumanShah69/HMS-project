@@ -1,0 +1,46 @@
+/* CSS for PatientDetails Component */
+.patient-details {
+    margin: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .loading-message {
+    font-size: 16px;
+    font-style: italic;
+    color: gray;
+    margin-top: 20px;
+  }
+  
+  .patient-details-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+  }
+  
+  .patient-details-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .patient-details-value {
+    color: #555;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  

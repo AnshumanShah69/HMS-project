@@ -1,0 +1,31 @@
+/* CSS for AppointmentList Component */
+.appointment-list {
+    font-family: Arial, sans-serif; /* Font family */
+    margin: 20px; /* Margin */
+  }
+  
+  h2 {
+    color: #333; /* Heading color */
+  }
+  
+  table {
+    width: 100%; /* Set table width to 100% */
+    border-collapse: collapse; /* Collapse table borders */
+    margin-top: 10px; /* Margin top */
+  }
+  
+  th, td {
+    padding: 8px; /* Padding */
+    text-align: left; /* Text alignment */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+  }
+  
+  th {
+    background-color: #f2f2f2; /* Header background color */
+  }
+  
+  tr:hover {
+    background-color: #f9f9f9; /* Hover background color */
+  }
+  
+  
