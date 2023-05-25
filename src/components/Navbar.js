@@ -19,7 +19,7 @@ function Navbar() {
           <Link to="/PatientRegistration">Patient Registration</Link>
         </li>
         <li>
-          <Link to="/PatientDetails">Patient Details</Link>
+          <Link to="/PatientDetails/manoj">Patient Details</Link>
         </li>
       </ul>
     </nav>

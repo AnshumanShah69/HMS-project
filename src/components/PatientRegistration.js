@@ -13,6 +13,7 @@ const PatientRegistrationForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const patientData = { name, age, gender, phoneNumber: phone, address, medicalHistory };
+    console.log(patientData)
     axios.post('http://localhost:3000/api/patient', patientData)
       .then((response) => {
         console.log(response.data);

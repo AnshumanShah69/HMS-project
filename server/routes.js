@@ -36,7 +36,7 @@ router.post('/patient', async (req, res) => {
     // Create a new Patient instance using the request body data
     const patient = new Patient(req.body);
     // Save the patient to the database
-    console.log(req.body)
+    console.log(req.body, patient)
     const savedPatient = await patient.save();
     res.json(savedPatient);
   } catch (error) {
@@ -48,13 +48,15 @@ router.post('/patient', async (req, res) => {
 // Patient Details route
 router.get('/patient/:name', async (req, res) => {
   try {
-    const patientName = req.params;
+    const {name} = req.params;
     // Fetch patient details from the database
-    const patient = await Patient.findOne({patientName });
+    console.log( name)
+    const patient = await Patient.findOne({name:name });
+    console.log(patient)
     if (!patient) {
       return res.status(404).json({ error: 'Patient not found' });
     }
-    res.json(patient);
+    res.status(200).json(patient);
   } catch (error) {
     console.error('Error retrieving patient details:', error);
     res.status(500).json({ error: 'Internal server error' });

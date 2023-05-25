@@ -8,7 +8,8 @@ function PatientDetails() {
   const [patient, setPatient] = useState(null);
 
   useEffect(() => {
-    axios.get(`/api/patient?name=${name}`)
+    console.log("!!!!", name);
+    axios.get(`http://localhost:3000/api/patient/${name}`)
       .then((response) => {
         setPatient(response.data);
       })

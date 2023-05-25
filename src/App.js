@@ -17,7 +17,7 @@ function App() {
           <Route exact path="/Dashboard" element={<Dashboard />} />
           <Route path="/AppointmentScheduling" element={<AppointmentScheduling />} />
           <Route path="/PatientRegistration" element={<PatientRegistration />} />
-          <Route path="/patientDetails" element={<PatientDetails />} />
+          <Route path="/patientDetails/:name" element={<PatientDetails />} />
           <Route path="/AppointmentList" element={<AppointmentList />} />
         </Routes>
       </BrowserRouter>

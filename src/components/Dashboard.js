@@ -10,7 +10,7 @@ function Dashboard() {
 
   useEffect(() => {
     // Fetch data from the backend API
-    axios.get('/api/dashboard')
+    axios.get('http://localhost:3000/api/dashboard')
       .then(response => {
         const { totalAppointments, totalPatients, pendingAppointments, upcomingAppointments } = response.data;
         setTotalAppointments(totalAppointments);

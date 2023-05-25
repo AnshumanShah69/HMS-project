@@ -4,3 +4,6 @@ Content-Type: application/json
 {
     "method": "hihhi"
 }
+
+###
+GET http://localhost:3000/api/patient/manoj
