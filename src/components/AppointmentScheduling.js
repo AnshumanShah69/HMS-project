@@ -20,7 +20,7 @@ const AppointmentScheduling = () => {
         appointmentTime,
       };
   
-      await axios.post('http://localhost:3000/api/appointment', appointmentData).then(res=>{
+      await axios.post('http://localhost:3001/api/appointment', appointmentData).then(res=>{
         console.log(res);
       });
       console.log('Appointment created successfully!');

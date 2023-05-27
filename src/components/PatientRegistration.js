@@ -14,7 +14,7 @@ const PatientRegistrationForm = () => {
     event.preventDefault();
     const patientData = { name, age, gender, phoneNumber: phone, address, medicalHistory };
     console.log(patientData)
-    axios.post('http://localhost:3000/api/patient', patientData)
+    axios.post('http://localhost:3001/api/patient', patientData)
       .then((response) => {
         console.log(response.data);
         // Handle successful registration, e.g. show a success message or redirect to the dashboard.
