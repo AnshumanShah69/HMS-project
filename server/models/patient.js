@@ -13,11 +13,15 @@ const patientSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  phoneNumber: {
+  phone: {
     type: String,
     required: true,
   },
   address: {
+    type: String,
+    required: true,
+  },
+  medicalHistory: {
     type: String,
     required: true,
   },

@@ -22,15 +22,14 @@ function PatientDetails() {
     <div className="patient-details">
       <h1>Patient Details</h1>
       {patient ? (
-        <div className="patient-details-container">
+         <div className="patient-details-container">
           <p className="patient-details-label">Name: <span className="patient-details-value">{patient.name}</span></p>
           <p className="patient-details-label">Age: <span className="patient-details-value">{patient.age}</span></p>
-          <p className="patient-details-label">Email: <span className="patient-details-value">{patient.email}</span></p>
+          <p className="patient-details-label">Gender: <span className="patient-details-value">{patient.gender}</span></p>
           <p className="patient-details-label">Phone: <span className="patient-details-value">{patient.phone}</span></p>
-          <p className="patient-details-label">Appointment Date: <span className="patient-details-value">{patient.appointmentDate}</span></p>
-          <p className="patient-details-label">Appointment Time: <span className="patient-details-value">{patient.appointmentTime}</span></p>
-          <p className="patient-details-label">Doctor Name: <span className="patient-details-value">{patient.doctorName}</span></p>
-        </div>
+          <p className="patient-details-label">Address: <span className="patient-details-value">{patient.address}</span></p>
+          <p className="patient-details-label">Medical History: <span className="patient-details-value">{patient.medicalHistory}</span></p>
+          </div>
       ) : (
         <p className="loading-message">Loading patient details...</p>
       )}
