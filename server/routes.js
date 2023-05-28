@@ -73,5 +73,17 @@ router.get('/patient/:name', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+// Appointment List route
+router.get('/appointmentlist', async (req, res) => {
+  try {
+    // Fetch all appointments from the database
+    const appointmentList = await Appointment.find();
+    res.json(appointmentList);
+  } catch (error) {
+    console.error('Error retrieving appointment list:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 
 module.exports = router;

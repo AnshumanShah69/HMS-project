@@ -7,7 +7,7 @@ const AppointmentList = () => {
 
   useEffect(() => {
     // Fetch the list of appointments from the backend API
-    axios.get('http://localhost:3001/api/appointment')
+    axios.get('http://localhost:3000/api/appointmentlist')
       .then((response) => {
         setAppointments(response.data);
       })
