@@ -8,6 +8,7 @@ const Patient = require('./models/patient');
 router.get('/dashboard', async (req, res) => {
   try {
     // Fetch data from the Dashboard collection
+    
     const dashboardData = await Dashboard.find({});
     console.log(dashboardData)
     res.json(dashboardData[0]);
