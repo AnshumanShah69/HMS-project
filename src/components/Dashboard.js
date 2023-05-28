@@ -12,7 +12,7 @@ function Dashboard() {
     // Fetch data from the backend API
     axios.get('http://localhost:3001/api/dashboard')
       .then(response => {
-        console.log(response)
+        console.log(response.data)
         const { totalAppointments, totalPatients, pendingAppointments, upcomingAppointments } = response.data;
         setTotalAppointments(totalAppointments);
         setTotalPatients(totalPatients);

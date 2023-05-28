@@ -10,7 +10,7 @@ router.get('/dashboard', async (req, res) => {
     // Fetch data from the Dashboard collection
     const dashboardData = await Dashboard.find({});
     console.log(dashboardData)
-    res.json(dashboardData);
+    res.json(dashboardData[0]);
   } catch (error) {
     console.error('Error retrieving dashboard data:', error);
     res.status(500).json({ error: 'Internal server error' });
@@ -24,6 +24,11 @@ router.post('/appointment', async (req, res) => {
     const appointment = new Appointment(req.body);
     // Save the appointment to the database
     const savedAppointment = await appointment.save();
+    const dashboard = await Dashboard.find({});
+    console.log(dashboard)
+    if(dashboard[0]?.totalAppointments) dashboard[0].totalAppointments++;
+    else dashboard[0].totalAppointments = 1;
+    await dashboard[0].save();
     res.json(savedAppointment);
   } catch (error) {
     console.error('Error saving appointment:', error);
@@ -36,6 +41,11 @@ router.post('/patient', async (req, res) => {
   try {
     // Create a new Patient instance using the request body data
     const patient = new Patient(req.body);
+    const dashboard = await Dashboard.find({});
+    console.log(dashboard)
+    if(dashboard[0]?.totalPatients) dashboard[0].totalPatients++;
+    else dashboard[0].totalPatients = 1;
+    await dashboard[0].save();
     // Save the patient to the database
     console.log(req.body, patient)
     const savedPatient = await patient.save();
