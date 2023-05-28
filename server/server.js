@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:3001"],
+    origin: ["http://localhost:3000"],
     credentials: true,
     methods: ["GET", "POST", "PATCH", "DELETE"],
   })
@@ -26,6 +26,6 @@ mongoose
   });
 app.use('/api', routes);
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log('Server listening on port 3000');
 });

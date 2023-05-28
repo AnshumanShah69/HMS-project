@@ -9,7 +9,7 @@ function PatientDetails() {
 
   useEffect(() => {
     console.log("!!!!", name);
-    axios.get(`http://localhost:3000/api/patient/${name}`)
+    axios.get(`http://localhost:3001/api/patient/${name}`)
       .then((response) => {
         setPatient(response.data);
       })
